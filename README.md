@@ -26,7 +26,7 @@ Este sistema web permite gestionar maquinaria, obras, asignaciones y rastreo geo
 
 ---
 
-## ⚙️ Instalación y configuración del proyecto
+ ⚙️ Instalación y configuración del proyecto
 
 1. Clonar repositorio
 ```bash
