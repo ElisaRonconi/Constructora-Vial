@@ -7,56 +7,72 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## 
+# 🏗️ Constructora Vial - Sistema de Gestión
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este sistema web permite gestionar maquinaria, obras, asignaciones y rastreo geográfico dentro de una empresa constructora vial. Incluye alertas de mantenimiento automático, tracking por provincia, y una interfaz moderna utilizando Laravel 12, Tailwind CSS y Flowbite.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## 📦 Requisitos previos
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- PHP 8.2+
+- Composer
+- Node.js y npm
+- MySQL 
+- Laravel CLI (`composer global require laravel/installer`)
+- Laravel Breeze (API + Blade scaffolding)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ⚙️ Instalación y configuración del proyecto
 
-## Laravel Sponsors
+1. Clonar repositorio
+```bash
+git clone https://github.com/tu-usuario/constructora-vial.git
+cd constructora-vial
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. Instalar dependencias PHP
+composer install
 
-### Premium Partners
+3.Instalar dependencias Frontend
+npm install
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+4.Generar la clave del proyecto
+php artisan key:generate
 
-## Contributing
+5.Ejecutar migraciones y seeders
+php artisan migrate --seed
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+🚀 Ejecución del sistema
+En una terminal, levantar el servidor PHP
+php artisan serve
 
-## Code of Conduct
+En otra terminal, compilar assets con Vite
+npm run dev
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+📍 Navegá a http://localhost:8000
 
-## Security Vulnerabilities
+🔐 Acceso al sistema
+Puedes registrarte como nuevo usuario desde la pantalla de login o usar usuario precargados en el seeder.
+USUARIO:
+EMAIL: admin@gmail.com
+CLAVE: adminadmin
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+📍 Funcionalidades principales
+CRUD completo de:Máquinas, Obras, Asignaciones
 
-## License
+Rastreo de ubicación por máquina en mapa Leaflet (provincias geolocalizadas)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-c
+Alertas automáticas por mantenimiento cuando una máquina supera los 500 km (En proceso)
+
+Dashboard con tarjetas de acceso y navegación fija
+
+📌 Desarrollo futuro
+📊 Sección de reportes (en desarrollo): se implementará con tecnologías como FPDF.
+
+🔔 Notificaciones visuales en mantenimiento: mostrar tarjetas de alerta dinámica y confirmación de reparación.
+
+
+
+
