@@ -17,6 +17,7 @@ Este sistema web permite gestionar maquinaria, obras, asignaciones y rastreo geo
 ## 📦 Requisitos previos
 
 - PHP 8.2+
+- Laragon
 - Composer
 - Node.js y npm
 - MySQL 
