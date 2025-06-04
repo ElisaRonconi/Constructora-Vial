@@ -61,7 +61,7 @@ EMAIL: admin@gmail.com
 CLAVE: adminadmin
 
 📍 Funcionalidades principales
-CRUD completo de:Máquinas, Obras, Asignaciones
+CRUD completo de:Máquinas, Obras, Asignaciones (crear nueva)
 
 Rastreo de ubicación por máquina en mapa Leaflet (provincias geolocalizadas)
 
