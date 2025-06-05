@@ -39,10 +39,27 @@ composer install
 3.Instalar dependencias Frontend
 npm install
 
-4.Generar la clave del proyecto
+4. Copiar y/o configurar el archivo .env
+DB_CONNECTION=mysql
+ DB_HOST=127.0.0.1
+ DB_PORT=3306
+ DB_DATABASE=constructora
+ DB_USERNAME=root
+ DB_PASSWORD=
+
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=//completar personalizado
+MAIL_PASSWORD=//completar personalizado
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="no-reply@constructora.com"
+MAIL_FROM_NAME="Constructora Vial"
+
+5.Generar la clave del proyecto
 php artisan key:generate
 
-5.Ejecutar migraciones y seeders
+6.Ejecutar migraciones y seeders
 php artisan migrate --seed
 
 🚀 Ejecución del sistema
