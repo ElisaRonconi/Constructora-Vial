@@ -65,7 +65,7 @@ class AssignmentController extends Controller
 {
     $request->validate([
         'kilometers' => 'required|numeric|min:0',
-        'data_end' => 'nullable|date', // según tu formulario
+        'data_end' => 'nullable|date', 
     ]);
 
     $assignment = Assignment::where('serial_machine', $serial)->latest()->firstOrFail();
@@ -73,7 +73,7 @@ class AssignmentController extends Controller
     $assignment->data_end = $request->data_end;
     $assignment->save();
 
-    // Verificamos mantenimiento solo si supera los 500 km
+    // Verificamos si supera los 500 km
     if ($assignment->kilometers >= 500) {
         $alertaExistente = Alert::where('id_assignment', $assignment->id)->first();
 
